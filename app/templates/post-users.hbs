@@ -1,0 +1,25 @@
+<article class="listing">
+	<h1>Posts</h1>
+
+	{{#each model as |post|}}
+	  <article class="listing">
+	    <span></span>
+	    <h3>{{post.id}} - {{post.title}}</h3>
+	    <div class="detail owner">
+	      {{post.body}}
+	    </div>
+	    <div>
+	    	<span>User id: {{post.userId}}</span>
+	    </div>
+	    {{#link-to 'detail' post.id class="btn btn-success"}}
+	      Editar
+	    {{/link-to}}
+	    
+	  </article>
+	{{/each}}
+	{{#link-to 'index' class="btn btn-warning"}}
+    Volver al index
+  	{{/link-to}}
+</article>
+
+{{outlet}}

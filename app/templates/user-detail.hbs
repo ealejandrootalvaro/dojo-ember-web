@@ -1,11 +1,14 @@
 <article class="listing">
 <h3>User</h3>
+<label>Id: {{model.id}} </label>
 <label>Name: {{model.name}} </label>
 <br>
 <label>Email: {{model.email}} </label>
 <br>
 <label>Phone: {{model.phone}} </label>
 <br>
+
 {{#link-to 'users' class="btn btn-warning"}}Volver usuarios {{/link-to}}
+{{#link-to 'post-users' model.id class="btn btn-warning"}}Ver post relacionados {{/link-to }}
 
 </article>
